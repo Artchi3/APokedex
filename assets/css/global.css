@@ -1,0 +1,110 @@
+*{ 
+    font-family: 'Roboto', sans-serif; 
+    box-sizing: border-box;
+}
+body{
+    background-color: #f6f8fc; 
+}
+.pokeview{ 
+    padding: 1rem;
+    background-color: white;
+    height: 100vh;
+}
+.pokelist{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr ; 
+}
+.pokemon{
+    margin: .5rem;
+    padding: 1rem 1rem;
+    background-color: #14a06f;
+    color: #fff;
+    border: 1px solid rebeccapurple;
+    border-radius: 1rem;
+    min-height: 100px; 
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+} 
+.pokemon .pokebase{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100% ; 
+}
+.pokemon .pokebase .pokenumber{
+    border-style: none;
+    align-self: flex-start;
+    text-align: right;
+    opacity: 1;
+    color:#fff;
+    font-size: .625rem;
+}
+.pokemon .pokebase .pokename{
+    font-size: 20px;
+    font-weight: 500;
+}
+.pokemon .pokedetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+.pokemon .pokedetails .poketypes{ 
+    width: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.pokemon .pokedetails .poketypes .type{
+    background-color: #61e1ca;
+    color: #fff;
+    padding: .25rem .5rem;
+    font-size: .825rem; 
+    margin: .25rem 0;
+    border-radius: 1rem;
+
+}
+.pokemon .pokedetails .pokesprite{
+    border-style: none;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    align-self: flex-end;
+} 
+@media screen and (min-width:270px) { 
+    .pokelist{
+        grid-template-columns: 1fr; 
+    }
+}
+@media screen and (min-width:380px) { 
+    .pokelist{
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+@media screen and (min-width:580px) { 
+    .pokelist{
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+@media screen and (min-width:962px) {
+    body{
+        padding: 1rem 0;
+    }
+    .pokeview{
+        max-width: 962px;
+        margin: 0 auto;
+        border-radius: 1rem;
+        height: auto;
+    }
+    .pokelist{
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
+}
+
