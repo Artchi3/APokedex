@@ -21,8 +21,7 @@ body{
     margin: .5rem;
     padding: 1rem 1rem;
     background-color: #14a06f8c; 
-    color: #fff;
-    border: 1px solid rebeccapurple;
+    color: #fff; 
     border-radius: 1rem;
     min-height: 100px; 
     display: flex;
@@ -48,6 +47,7 @@ body{
 .pokemon .pokebase .pokename{
     font-size: 20px;
     font-weight: 500;
+    text-transform: capitalize;
 }
 .pokemon .pokedetails{
     display: flex;
@@ -63,12 +63,16 @@ body{
     margin: 0;
 }
 .pokemon .pokedetails .poketypes .type{
-    background-color: #61e1ca;
+    background-color: #fff;
+    border: 0.2px solid white;
+    box-shadow: -5px 7px 18px -8px rgba(0,0,0,0.75);
     color: #fff;
     padding: .25rem .5rem;
     font-size: .825rem; 
     margin: .25rem 0;
     border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
 
 }
 .pokemon .pokedetails .pokesprite{
@@ -81,58 +85,58 @@ body{
 } 
 
 .normal{
-    background-color: #a6a877;
+    background-color: #a6a8778a !important;
 }
 .grass{
-    background-color: #77c850;
+    background-color: #77c8508a !important;
 }
 .fire{
-    background-color: #ee7f30;
+    background-color: #ee7f308a !important;
 }
 .water{
-    background-color: #678fee;
+    background-color: #678fee8a !important;
 }
 .eletric{
-    background-color: #f7cf2e;
+    background-color: #f7cf2e8a !important;
 }
 .ice{
-    background-color: #98d5d7;
+    background-color: #98d5d78a !important;
 }
 .fround{
-    background-color: #dfbf69;
+    background-color: #dfbf698a !important;
 }
 .flying{
-    background-color: #a98ff0;
+    background-color: #a98ff08a !important;
 }
 .poison{
-    background-color: #a040a0;
+    background-color: #a040a08a !important;
 }
 .fighting{
-    background-color: #bf3029;
+    background-color: #bf30298a !important;
 }
 .psychic{
-    background-color: #f65687;
+    background-color: #f656878a !important;
 }
 .dark{
-    background-color: #725847;
+    background-color: #7258478a !important;
 }
 .rock{
-    background-color: #b8a137;
+    background-color: #b8a1378a !important;
 }
 .bug{
-    background-color: #a8b720;
+    background-color: #a8b7208a !important;
 }
 .ghost{
-    background-color: #6e5896;
+    background-color: #6e58968a !important;
 }
 .steel{
-    background-color: #b9b7cf;
+    background-color: #b9b7cf8a !important;
 }
 .dragon{
-    background-color: #6f38f6;
+    background-color: #6f38f68a !important;
 }
 .fairy{
-    background-color: #f9aec7;
+    background-color: #f9aec78a !important;
 }
  
 @media screen and (min-width:270px) { 
