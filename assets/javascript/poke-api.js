@@ -19,8 +19,8 @@ pokeApi.getPokemonData = (pokeUrl)=>{
     .then((response) => response.json()) 
     .then(convertAPItoPokeData)
 }
-pokeApi.getPokemons = (offset = 0, limit= 10)=>{
-    const url = `https://pokeapi.co/api/v2/pokemon?${offset}=0&${limit}=10`
+pokeApi.getPokemons = (offset, limit)=>{
+    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
     return fetch(url)
     .then((response) => response.json())
     .then((jsonBody) => jsonBody.results)

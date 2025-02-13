@@ -83,7 +83,23 @@ body{
     height: auto;
     align-self: flex-end;
 } 
-
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+.pagination .button{
+    background-color: #6c79bd;
+    border-radius: 1rem;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.625rem;
+    margin: 0.25rem 0;
+}
+/* POKETYPES */
 .normal{
     background-color: #a6a8778a !important;
 }
@@ -96,13 +112,13 @@ body{
 .water{
     background-color: #678fee8a !important;
 }
-.eletric{
+.electric{
     background-color: #f7cf2e8a !important;
 }
 .ice{
     background-color: #98d5d78a !important;
 }
-.fround{
+.ground{
     background-color: #dfbf698a !important;
 }
 .flying{
