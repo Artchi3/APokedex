@@ -1,14 +1,10 @@
 const pokemonTable = document.getElementById('poketable')
 const loadmorebtn = document.getElementById('loadmore')
-
+const maxrecord = 1025   
 const limit = 6
 let offset = 0
 
-function loadMorePokes(offset, limit){ 
-    function convertPokeToLi(pokemon) {
-       
-    }
-
+function loadMorePokes(offset, limit){  
     pokeApi.getPokemons(offset, limit).then((pokemons = []) =>{  
         const newHtml = pokemons.map((pokemon) => `
                 <li class="pokemon ${pokemon.type}">
@@ -32,5 +28,15 @@ function loadMorePokes(offset, limit){
 loadMorePokes(offset, limit)
 loadmorebtn.addEventListener('click', () =>{
     offset += limit
-    loadMorePokes(offset, limit)
+    const qtdRecPage = offset+limit
+    if (qtdRecPage >= maxrecord) {
+        const newLimit = qtdRecPage - maxrecord
+        loadMorePokes(offset, newLimit)
+        
+        loadmorebtn.parentElement.removeChild(loadmorebtn)
+        return
+    }else{
+        loadMorePokes(offset, limit)
+    }
+
 })
